@@ -1,0 +1,36 @@
+&binary_controls
+
+/ ! end of binary_controls namelist
+
+&star_job
+  create_pre_main_sequence_model = .true.
+save_model_when_terminate = .true.
+save_model_filename = 'ZAMS.mod'
+
+  ! Add star_job commands here
+
+  initial_zfracs = 3
+  pgstar_flag = .true.
+
+/ ! end of star_job namelist
+
+&controls
+
+  ! Add controls commands here
+
+  initial_mass = 0.363
+  initial_z = 0.02
+  mixing_length_alpha = 1.75
+!  max_age = 
+
+  max_years_for_timestep = 1d8
+
+  which_atm_option = 'simple_photosphere'
+  default_net_name = 'basic.net'
+  history_interval = 1
+
+/ ! end of controls namelist
+
+&pgstar
+
+/ ! end of pgstar namelist

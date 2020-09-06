@@ -1,0 +1,44 @@
+&constants
+/
+
+&model
+	model_type = 'EVOL'
+	file = '1.5M_6022_n61.profile.FGONG.oscmod-better'
+	file_format = 'LOSC'
+/
+
+&mode
+	l = 1
+/
+
+&osc
+/
+
+&num
+	diff_scheme = 'COLLOC_GL6'
+/
+
+&scan
+	grid_type = 'INVERSE'
+	freq_min = 110
+	freq_max = 112
+	freq_min_units = 'UHZ'
+	freq_max_units = 'UHZ'
+	n_freq = 20
+/
+
+&grid
+	alpha_osc = 10.
+	alpha_exp = 2.
+	n_inner = 10
+/
+
+&ad_output
+	summary_file = 'summary.txt'
+	summary_file_format = 'TXT'
+	summary_item_list = 'l,n_pg,n_p,n_g,freq'
+/
+
+&nad_output
+/
+

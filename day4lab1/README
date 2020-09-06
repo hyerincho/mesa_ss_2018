@@ -1,0 +1,12 @@
+This is a template work directory for using star+adipls for seismology.
+
+inlist_1 does create pre ms for a mass near the expected result.
+
+inlist_2 adjusts the net and runs through the initial pre-ms 
+until logL drops.  want to save a model when still fully convective.
+you should check to be sure that this is happening!
+
+inlist_3 is the one that does the evolution.
+
+you will probably want to run with do_restribute_mesh = .true.
+you can set the number of grid points by editing redistrb.c.pruned.in

@@ -1,0 +1,69 @@
+! inlist_make_starting_model
+
+! 2nd inlist loads 'pre_ms.mod', changes parameters as desired, and runs until reach L limit.
+! this is the time to change uniform composition to approximate the target
+! and set other things such as 'which_atm_option'.
+! the stopping L is set to select a model that is near the end of fully convective contraction.
+! since it is fully convective, we can safely make changes to uniform composition.
+! the final model is saved to 'astero_test.mod' for use by 'inlist_astero'.
+
+
+&star_job ! inlist_make_starting_model
+
+      mesa_dir = '' ! empty string defaults to environment variable MESA_DIR
+
+      show_log_description_at_start = .false.
+      
+      load_saved_model = .true.
+      saved_model_name = 'pre_ms.mod'
+
+      save_model_when_terminate = .true.
+      save_model_filename = 'astero_test.mod'
+
+      set_uniform_initial_composition = .true.
+   	   initial_zfracs = 6 ! AGSS09_zfracs = 6
+         initial_h1 = 0.741
+         initial_h2 = 0
+         initial_he3 = 3e-5
+         initial_he4 = 0.23997
+
+      kappa_file_prefix = 'a09'
+
+      astero_just_call_my_extras_check_model = .true.
+
+/ ! end of star_job namelist
+
+
+&controls
+
+      mixing_length_alpha = 2.0d0
+
+      log_L_lower_limit = 0.4
+         ! this 
+
+      which_atm_option = 'photosphere_tables'  
+         ! use whatever option is best for your case.
+         ! 'photosphere_tables' is just an example.
+         ! it is a typical choice for the running solar models in mesa.
+
+      ! controls for output
+      photo_interval = 50
+      profile_interval = 50
+      history_interval = 1
+      terminal_interval = 10
+      write_header_frequency = 10
+ 
+      ! timesteps
+      varcontrol_target = 1d-4
+
+      ! mesh adjustment
+      mesh_delta_coeff = 0.5
+
+
+/ ! end of controls namelist
+
+
+&pgstar
+
+
+/ ! end of pgstar namelist

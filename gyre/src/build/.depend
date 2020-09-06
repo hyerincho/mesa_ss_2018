@@ -1,0 +1,294 @@
+core_constants.o core_constants.mod : core_kinds.mod
+core_constants.f90 : 
+core_func.o core_func.mod : core_kinds.mod
+core_func.f90 : ../extern/core/core.inc
+core_hgroup.o core_hgroup.mod : hdf5.mod core_kinds.mod
+core_hgroup.f90 : ../extern/core/core.inc
+core_kinds.o core_kinds.mod : 
+core_kinds.f90 : 
+core_linalg.o core_linalg.mod : core_kinds.mod
+core_linalg.f90 : ../extern/core/core.inc
+core_memory.o core_memory.mod : core_kinds.mod
+core_memory.f90 : ../extern/core/core.inc ../extern/core/core_memory.inc
+core_order.o core_order.mod : core_kinds.mod
+core_order.f90 : ../extern/core/core.inc
+core_parallel.o core_parallel.mod : core_order.mod core_kinds.mod
+core_parallel.f90 : ../extern/core/core.inc
+core_string.o core_string.mod : core_kinds.mod
+core_string.f90 : ../extern/core/core_parallel.inc ../extern/core/core.inc
+core_system.o core_system.mod : core_kinds.mod
+core_system.f90 : ../extern/core/core.inc
+gyre.o gyre.mod : core_parallel.mod gyre_nad_bvp.mod gyre_num_par.mod gyre_context.mod core_system.mod gyre_util.mod gyre_grid_factory.mod gyre_model.mod gyre_scan_par.mod gyre_model_factory.mod gyre_osc_par.mod gyre_grid.mod gyre_model_par.mod gyre_grid_par.mod gyre_mode.mod core_kinds.mod gyre_search.mod gyre_ext.mod gyre_constants.mod gyre_mode_par.mod gyre_output.mod gyre_out_par.mod gyre_version.mod gyre_rad_bvp.mod gyre_bvp.mod gyre_ad_bvp.mod
+gyre.f90 : ../extern/core/core.inc
+gyre : gyre_atmos.o gyre_rad_trans.o gyre_rad_bvp.o gyre_interp.o gyre_evol_model.o gyre_gsm_file.o gyre_rad_eqns.o gyre_mesa_file.o gyre_hom_model.o gyre_nad_diff.o gyre_r_eqns.o gyre_c_trapz_diff.o gyre_tar_rot.o gyre_freq.o gyre_nad_bound.o gyre_nad_match.o core_parallel.o gyre_grid_weights.o gyre_writer.o gyre_osc_file.o gyre_mode.o core_memory.o gyre_hdf_writer.o gyre_grid.o gyre_c_calc.o gyre_linalg.o gyre_r_mirk_diff.o gyre_band_sysmtx.o gyre_b3_file.o gyre_mode_par.o core_hgroup.o gyre_model_factory.o core_system.o gyre_cheb_fit.o gyre_r_block_sysmtx.o gyre_nad_trans.o gyre_rad_bound.o gyre_c_search.o gyre_c_mirk_diff.o gyre_ad_diff.o gyre_out_par.o gyre_bvp.o gyre_tar_eigen.o gyre_c_ext_func.o gyre_ad_bound.o gyre_r_state.o gyre_state.o gyre_search.o gyre.o gyre_rot.o core_linalg.o gyre_c_magnus_diff.o gyre_ad_bvp.o gyre_util.o gyre_grid_spec.o gyre_nad_eqns.o gyre_root.o gyre_rad_match.o gyre_c_block_sysmtx.o core_func.o gyre_r_band_sysmtx.o gyre_constants.o gyre_poly_model.o gyre_model_util.o gyre_rad_diff.o gyre_output.o gyre_cimplex.o gyre_r_dopp_rot.o gyre_model_par.o gyre_rot_factory.o gyre_c_state.o gyre_r_root.o gyre_r_trapz_diff.o gyre_sysmtx.o gyre_ext_func.o gyre_c_dopp_rot.o gyre_c_ext.o gyre_famdl_file.o gyre_losc_file.o gyre_ad_match.o gyre_r_magnus_diff.o gyre_r_ext.o gyre_status.o gyre_poly_file.o gyre_c_interp.o core_string.o gyre_amdl_file.o gyre_diff_factory.o gyre_ad_eqns.o gyre_r_rot.o gyre_r_colloc_diff.o gyre_diff.o gyre_wave.o gyre_r_diff.o gyre_eqns.o gyre_version.o gyre_r_bvp.o gyre_r_ext_func.o gyre_trapz_diff.o gyre_c_bound.o gyre_num_par.o gyre_bound.o gyre_r_bound.o gyre_dopp_rot.o gyre_r_discrim_func.o gyre_point.o gyre_ad_trans.o gyre_r_sysmtx.o gyre_r_calc.o gyre_block_sysmtx.o gyre_osc_par.o gyre_magnus_diff.o gyre_r_interp.o gyre_c_band_sysmtx.o gyre_scan_par.o gyre_model.o core_order.o gyre_ext.o gyre_discrim_func.o gyre_nad_bvp.o core_kinds.o gyre_context.o gyre_c_eqns.o gyre_mirk_diff.o gyre_c_rot.o gyre_grid_factory.o gyre_qad_eval.o core_constants.o gyre_grid_util.o gyre_sysmtx_factory.o gyre_c_root.o gyre_c_tar_rot.o gyre_calc.o gyre_c_bvp.o gyre_c_diff.o gyre_r_tar_rot.o gyre_c_discrim_func.o gyre_fgong_file.o gyre_grid_par.o gyre_c_sysmtx.o gyre_txt_writer.o gyre_c_colloc_diff.o gyre_tar_fit.o gyre_r_search.o gyre_colloc_diff.o
+gyre_ad_bound.o gyre_ad_bound.mod : gyre_state.mod gyre_context.mod core_kinds.mod gyre_model_util.mod gyre_point.mod gyre_bound.mod gyre_osc_par.mod gyre_mode_par.mod gyre_atmos.mod gyre_ad_trans.mod gyre_model.mod
+gyre_ad_bound.f90 : ../extern/core/core.inc
+gyre_ad_bvp.o gyre_ad_bvp.mod : gyre_grid.mod gyre_model.mod gyre_ext.mod gyre_bvp.mod gyre_qad_eval.mod gyre_point.mod gyre_ad_trans.mod gyre_grid_factory.mod gyre_wave.mod core_kinds.mod gyre_context.mod gyre_ad_bound.mod gyre_ad_eqns.mod gyre_ad_diff.mod gyre_interp.mod gyre_state.mod gyre_osc_par.mod gyre_mode_par.mod gyre_num_par.mod
+gyre_ad_bvp.f90 : ../extern/core/core.inc
+gyre_ad_diff.o gyre_ad_diff.mod : gyre_mode_par.mod gyre_diff_factory.mod gyre_diff.mod gyre_ad_match.mod gyre_num_par.mod gyre_point.mod gyre_ad_eqns.mod gyre_context.mod gyre_state.mod gyre_osc_par.mod gyre_ext.mod core_kinds.mod
+gyre_ad_diff.f90 : ../extern/core/core.inc
+gyre_ad_eqns.o gyre_ad_eqns.mod : gyre_eqns.mod gyre_context.mod gyre_mode_par.mod gyre_ad_trans.mod gyre_point.mod gyre_state.mod core_kinds.mod gyre_osc_par.mod gyre_model.mod gyre_model_util.mod
+gyre_ad_eqns.f90 : ../extern/core/core.inc
+gyre_ad_match.o gyre_ad_match.mod : gyre_ad_trans.mod gyre_osc_par.mod gyre_context.mod gyre_diff.mod gyre_ext.mod gyre_grid.mod gyre_point.mod gyre_model_util.mod gyre_state.mod gyre_model.mod core_kinds.mod gyre_mode_par.mod
+gyre_ad_match.f90 : ../extern/core/core.inc
+gyre_ad_trans.o gyre_ad_trans.mod : gyre_point.mod gyre_context.mod gyre_osc_par.mod gyre_model_util.mod gyre_model.mod core_kinds.mod gyre_mode_par.mod gyre_state.mod
+gyre_ad_trans.f90 : ../extern/core/core.inc
+gyre_amdl_file.o gyre_amdl_file.mod : gyre_model_par.mod core_kinds.mod gyre_evol_model.mod gyre_model.mod gyre_util.mod core_order.mod gyre_constants.mod gyre_model_util.mod
+gyre_amdl_file.f90 : ../extern/core/core.inc
+gyre_atmos.o gyre_atmos.mod : core_kinds.mod gyre_point.mod gyre_model.mod
+gyre_atmos.f90 : ../extern/core/core.inc
+gyre_b3_file.o gyre_b3_file.mod : gyre_evol_model.mod core_hgroup.mod gyre_model.mod gyre_constants.mod gyre_model_util.mod gyre_util.mod gyre_model_par.mod core_kinds.mod
+gyre_b3_file.f90 : ../extern/core/core.inc
+gyre_band_sysmtx.o gyre_band_sysmtx.mod : gyre_r_band_sysmtx.mod gyre_c_band_sysmtx.mod
+gyre_band_sysmtx.f90 : 
+gyre_block_sysmtx.o gyre_block_sysmtx.mod : gyre_r_block_sysmtx.mod gyre_c_block_sysmtx.mod
+gyre_block_sysmtx.f90 : 
+gyre_bound.o gyre_bound.mod : gyre_c_bound.mod gyre_r_bound.mod
+gyre_bound.f90 : 
+gyre_bvp.o gyre_bvp.mod : gyre_r_bvp.mod gyre_c_bvp.mod
+gyre_bvp.f90 : 
+gyre_c_band_sysmtx.o gyre_c_band_sysmtx.mod : core_kinds.mod gyre_sysmtx.mod gyre_linalg.mod core_parallel.mod gyre_ext.mod core_linalg.mod
+gyre_c_band_sysmtx.f90 : ../matrix/gyre_band_sysmtx.inc ../extern/core/core.inc
+gyre_c_block_sysmtx.o gyre_c_block_sysmtx.mod : core_kinds.mod core_parallel.mod gyre_sysmtx.mod gyre_linalg.mod gyre_ext.mod core_linalg.mod
+gyre_c_block_sysmtx.f90 : ../extern/core/core.inc ../matrix/gyre_block_sysmtx.inc
+gyre_c_bound.o gyre_c_bound.mod : core_kinds.mod gyre_state.mod
+gyre_c_bound.f90 : ../extern/core/core.inc ../bvp/gyre_bound.inc
+gyre_c_bvp.o gyre_c_bvp.mod : gyre_status.mod gyre_state.mod gyre_ext.mod gyre_sysmtx_factory.mod gyre_diff.mod gyre_bound.mod core_kinds.mod gyre_sysmtx.mod gyre_num_par.mod
+gyre_c_bvp.f90 : ../bvp/gyre_bvp.inc ../extern/core/core.inc
+gyre_c_calc.o gyre_c_calc.mod : core_kinds.mod core_linalg.mod
+gyre_c_calc.f90 : ../extern/core/core_parallel.inc ../interp/gyre_calc.inc ../extern/core/core.inc
+gyre_c_colloc_diff.o gyre_c_colloc_diff.mod : core_linalg.mod core_kinds.mod gyre_ext.mod gyre_diff.mod gyre_linalg.mod gyre_point.mod gyre_eqns.mod gyre_state.mod
+gyre_c_colloc_diff.f90 : ../extern/core/core.inc ../diff/gyre_colloc_diff.inc
+gyre_c_diff.o gyre_c_diff.mod : gyre_ext.mod gyre_state.mod core_kinds.mod
+gyre_c_diff.f90 : ../extern/core/core.inc ../diff/gyre_diff.inc
+gyre_c_discrim_func.o gyre_c_discrim_func.mod : gyre_ext_func.mod gyre_ext.mod gyre_bvp.mod gyre_status.mod gyre_state.mod core_kinds.mod
+gyre_c_discrim_func.f90 : ../extern/core/core.inc
+gyre_c_dopp_rot.o gyre_c_dopp_rot.mod : gyre_mode_par.mod core_kinds.mod gyre_rot.mod
+gyre_c_dopp_rot.f90 : ../rot/gyre_dopp_rot.inc ../extern/core/core.inc
+gyre_c_eqns.o gyre_c_eqns.mod : core_kinds.mod gyre_state.mod gyre_point.mod
+gyre_c_eqns.f90 : ../diff/gyre_eqns.inc
+gyre_c_ext.o gyre_c_ext.mod : core_parallel.mod gyre_r_ext.mod core_kinds.mod
+gyre_c_ext.f90 : ../extern/core/core_parallel.inc ../extern/core/core.inc
+gyre_c_ext_func.o gyre_c_ext_func.mod : core_kinds.mod gyre_ext.mod gyre_c_ext.mod
+gyre_c_ext_func.f90 : ../extern/core/core.inc
+gyre_c_interp.o gyre_c_interp.mod : core_parallel.mod core_order.mod core_hgroup.mod core_linalg.mod core_kinds.mod gyre_calc.mod
+gyre_c_interp.f90 : ../extern/core/core_parallel.inc ../interp/gyre_interp.inc ../extern/core/core.inc
+gyre_c_magnus_diff.o gyre_c_magnus_diff.mod : gyre_linalg.mod core_kinds.mod gyre_point.mod gyre_eqns.mod gyre_state.mod gyre_diff.mod gyre_ext.mod
+gyre_c_magnus_diff.f90 : ../diff/gyre_magnus_diff.inc ../extern/core/core.inc
+gyre_c_mirk_diff.o gyre_c_mirk_diff.mod : core_kinds.mod gyre_diff.mod gyre_eqns.mod gyre_state.mod gyre_linalg.mod gyre_point.mod gyre_ext.mod core_linalg.mod
+gyre_c_mirk_diff.f90 : ../extern/core/core.inc ../diff/gyre_mirk_diff.inc
+gyre_c_root.o gyre_c_root.mod : core_kinds.mod gyre_status.mod gyre_num_par.mod gyre_cimplex.mod gyre_ext_func.mod gyre_ext.mod
+gyre_c_root.f90 : ../extern/core/core.inc
+gyre_c_rot.o gyre_c_rot.mod : core_kinds.mod
+gyre_c_rot.f90 : ../extern/core/core.inc ../rot/gyre_rot.inc
+gyre_c_search.o gyre_c_search.mod : gyre_util.mod gyre_bvp.mod gyre_mode.mod gyre_constants.mod core_parallel.mod gyre_root.mod gyre_wave.mod gyre_discrim_func.mod core_order.mod gyre_num_par.mod gyre_status.mod gyre_ext.mod gyre_state.mod gyre_osc_par.mod gyre_mode_par.mod core_kinds.mod gyre_nad_bvp.mod
+gyre_c_search.f90 : ../extern/core/core.inc
+gyre_c_state.o gyre_c_state.mod : core_kinds.mod
+gyre_c_state.f90 : ../extern/core/core.inc
+gyre_c_sysmtx.o gyre_c_sysmtx.mod : gyre_ext.mod core_kinds.mod
+gyre_c_sysmtx.f90 : ../extern/core/core.inc ../matrix/gyre_sysmtx.inc
+gyre_c_tar_rot.o gyre_c_tar_rot.mod : gyre_tar_fit.mod gyre_constants.mod core_kinds.mod gyre_mode_par.mod gyre_rot.mod core_hgroup.mod gyre_freq.mod
+gyre_c_tar_rot.f90 : ../extern/core/core.inc ../rot/gyre_tar_rot.inc
+gyre_c_trapz_diff.o gyre_c_trapz_diff.mod : core_kinds.mod gyre_eqns.mod gyre_linalg.mod gyre_diff.mod gyre_state.mod gyre_point.mod gyre_ext.mod core_linalg.mod
+gyre_c_trapz_diff.f90 : ../diff/gyre_trapz_diff.inc ../extern/core/core.inc
+gyre_calc.o gyre_calc.mod : gyre_r_calc.mod gyre_c_calc.mod
+gyre_calc.f90 : 
+gyre_cheb_fit.o gyre_cheb_fit.mod : core_constants.mod core_kinds.mod core_hgroup.mod core_memory.mod
+gyre_cheb_fit.f90 : ../extern/core/core.inc
+gyre_cimplex.o gyre_cimplex.mod : gyre_ext.mod gyre_status.mod gyre_ext_func.mod core_kinds.mod
+gyre_cimplex.f90 : ../extern/core/core.inc
+gyre_colloc_diff.o gyre_colloc_diff.mod : gyre_r_colloc_diff.mod gyre_c_colloc_diff.mod
+gyre_colloc_diff.f90 : 
+gyre_constants.o gyre_constants.mod : core_kinds.mod core_system.mod core_constants.mod
+gyre_constants.f90 : ../extern/core/core.inc
+gyre_context.o gyre_context.mod : core_kinds.mod gyre_freq.mod gyre_model.mod gyre_rot.mod gyre_grid.mod gyre_interp.mod gyre_osc_par.mod gyre_state.mod gyre_grid_par.mod gyre_rot_factory.mod gyre_mode_par.mod gyre_point.mod core_order.mod
+gyre_context.f90 : ../extern/core/core.inc
+gyre_diff.o gyre_diff.mod : gyre_r_diff.mod gyre_c_diff.mod
+gyre_diff.f90 : 
+gyre_diff_factory.o gyre_diff_factory.mod : core_kinds.mod gyre_point.mod gyre_trapz_diff.mod gyre_diff.mod gyre_mirk_diff.mod gyre_colloc_diff.mod gyre_magnus_diff.mod gyre_num_par.mod gyre_eqns.mod
+gyre_diff_factory.f90 : ../extern/core/core.inc
+gyre_discrim_func.o gyre_discrim_func.mod : gyre_r_discrim_func.mod gyre_c_discrim_func.mod
+gyre_discrim_func.f90 : 
+gyre_dopp_rot.o gyre_dopp_rot.mod : gyre_c_dopp_rot.mod gyre_r_dopp_rot.mod
+gyre_dopp_rot.f90 : 
+gyre_eqns.o gyre_eqns.mod : gyre_r_eqns.mod gyre_c_eqns.mod
+gyre_eqns.f90 : 
+gyre_evol_model.o gyre_evol_model.mod : gyre_point.mod gyre_util.mod gyre_model.mod gyre_grid.mod core_kinds.mod gyre_constants.mod gyre_interp.mod gyre_model_par.mod
+gyre_evol_model.f90 : ../extern/core/core.inc
+gyre_ext.o gyre_ext.mod : gyre_c_ext.mod gyre_r_ext.mod
+gyre_ext.f90 : 
+gyre_ext_func.o gyre_ext_func.mod : gyre_c_ext_func.mod gyre_r_ext_func.mod
+gyre_ext_func.f90 : ../extern/core/core.inc
+gyre_famdl_file.o gyre_famdl_file.mod : gyre_constants.mod gyre_model_util.mod core_kinds.mod gyre_model_par.mod gyre_evol_model.mod gyre_util.mod core_order.mod gyre_model.mod
+gyre_famdl_file.f90 : ../extern/core/core.inc
+gyre_fgong_file.o gyre_fgong_file.mod : gyre_model_par.mod core_kinds.mod gyre_model.mod gyre_util.mod gyre_constants.mod gyre_evol_model.mod gyre_model_util.mod
+gyre_fgong_file.f90 : ../extern/core/core.inc
+gyre_freq.o gyre_freq.mod : gyre_atmos.mod gyre_evol_model.mod gyre_point.mod gyre_constants.mod gyre_mode_par.mod gyre_hom_model.mod gyre_poly_model.mod gyre_osc_par.mod core_kinds.mod gyre_model.mod gyre_util.mod
+gyre_freq.f90 : ../extern/core/core.inc
+gyre_grid.o gyre_grid.mod : core_parallel.mod gyre_point.mod core_kinds.mod
+gyre_grid.f90 : ../extern/core/core.inc ../extern/core/core_parallel.inc
+gyre_grid_factory.o gyre_grid_factory.mod : gyre_point.mod gyre_model.mod gyre_grid_par.mod gyre_context.mod gyre_grid_spec.mod gyre_mode_par.mod gyre_state.mod gyre_freq.mod gyre_constants.mod gyre_util.mod gyre_osc_par.mod gyre_grid_util.mod core_kinds.mod gyre_grid.mod
+gyre_grid_factory.f90 : ../extern/core/core.inc
+gyre_grid_par.o gyre_grid_par.mod : core_kinds.mod
+gyre_grid_par.f90 : ../extern/core/core.inc
+gyre_grid_spec.o gyre_grid_spec.mod : core_kinds.mod core_parallel.mod gyre_context.mod
+gyre_grid_spec.f90 : ../extern/core/core_parallel.inc ../extern/core/core.inc
+gyre_grid_util.o gyre_grid_util.mod : core_func.mod gyre_rot_factory.mod gyre_freq.mod gyre_grid.mod gyre_state.mod gyre_point.mod gyre_context.mod core_kinds.mod gyre_rot.mod gyre_model.mod
+gyre_grid_util.f90 : ../extern/core/core.inc
+gyre_grid_weights.o gyre_grid_weights.mod : core_kinds.mod core_func.mod gyre_grid.mod
+gyre_grid_weights.f90 : ../extern/core/core.inc
+gyre_gsm_file.o gyre_gsm_file.mod : gyre_evol_model.mod gyre_model.mod gyre_constants.mod gyre_model_par.mod gyre_util.mod gyre_model_util.mod core_hgroup.mod core_kinds.mod
+gyre_gsm_file.f90 : ../extern/core/core.inc
+gyre_hdf_writer.o gyre_hdf_writer.mod : gyre_writer.mod core_kinds.mod core_hgroup.mod
+gyre_hdf_writer.f90 : ../extern/core/core.inc
+gyre_hom_model.o gyre_hom_model.mod : gyre_point.mod core_kinds.mod gyre_model_util.mod gyre_model_par.mod gyre_constants.mod gyre_grid.mod gyre_model.mod gyre_grid_weights.mod
+gyre_hom_model.f90 : ../extern/core/core.inc
+gyre_interp.o gyre_interp.mod : gyre_r_interp.mod gyre_c_interp.mod
+gyre_interp.f90 : 
+gyre_linalg.o gyre_linalg.mod : core_linalg.mod core_order.mod core_kinds.mod
+gyre_linalg.f90 : ../extern/core/core.inc
+gyre_losc_file.o gyre_losc_file.mod : gyre_model.mod gyre_model_util.mod gyre_constants.mod gyre_model_par.mod gyre_evol_model.mod core_kinds.mod core_order.mod gyre_util.mod
+gyre_losc_file.f90 : ../extern/core/core.inc
+gyre_magnus_diff.o gyre_magnus_diff.mod : gyre_c_magnus_diff.mod gyre_r_magnus_diff.mod
+gyre_magnus_diff.f90 : 
+gyre_mesa_file.o gyre_mesa_file.mod : gyre_constants.mod gyre_model_par.mod gyre_model_util.mod gyre_evol_model.mod gyre_model.mod core_kinds.mod gyre_util.mod core_order.mod
+gyre_mesa_file.f90 : ../extern/core/core.inc
+gyre_mirk_diff.o gyre_mirk_diff.mod : gyre_r_mirk_diff.mod gyre_c_mirk_diff.mod
+gyre_mirk_diff.f90 : 
+gyre_mode.o gyre_mode.mod : core_parallel.mod gyre_mode_par.mod core_kinds.mod gyre_ext.mod gyre_grid_util.mod gyre_state.mod gyre_wave.mod gyre_context.mod gyre_grid.mod gyre_osc_par.mod gyre_util.mod
+gyre_mode.f90 : ../extern/core/core.inc ../extern/core/core_memory.inc
+gyre_mode_par.o gyre_mode_par.mod : core_kinds.mod core_parallel.mod
+gyre_mode_par.f90 : ../extern/core/core_parallel.inc ../extern/core/core.inc
+gyre_model.o gyre_model.mod : gyre_grid.mod core_kinds.mod gyre_point.mod
+gyre_model.f90 : ../extern/core/core.inc
+gyre_model_factory.o gyre_model_factory.mod : gyre_losc_file.mod gyre_mesa_file.mod gyre_b3_file.mod gyre_hom_model.mod gyre_amdl_file.mod gyre_poly_model.mod gyre_famdl_file.mod gyre_model_par.mod gyre_gsm_file.mod gyre_evol_model.mod gyre_osc_file.mod gyre_model.mod gyre_poly_file.mod core_kinds.mod gyre_fgong_file.mod
+gyre_model_factory.f90 : ../extern/core/core.inc
+gyre_model_par.o gyre_model_par.mod : core_kinds.mod core_constants.mod
+gyre_model_par.f90 : ../extern/core/core.inc
+gyre_model_util.o gyre_model_util.mod : core_kinds.mod gyre_model_par.mod gyre_model.mod gyre_util.mod gyre_constants.mod
+gyre_model_util.f90 : ../extern/core/core.inc
+gyre_nad_bound.o gyre_nad_bound.mod : gyre_bound.mod gyre_mode_par.mod gyre_rot.mod gyre_osc_par.mod gyre_model.mod gyre_nad_trans.mod gyre_atmos.mod gyre_state.mod gyre_model_util.mod gyre_context.mod core_kinds.mod gyre_point.mod
+gyre_nad_bound.f90 : ../extern/core/core.inc
+gyre_nad_bvp.o gyre_nad_bvp.mod : gyre_grid_factory.mod gyre_nad_trans.mod gyre_nad_bound.mod gyre_point.mod gyre_osc_par.mod gyre_grid.mod gyre_wave.mod gyre_num_par.mod gyre_bvp.mod gyre_state.mod gyre_ext.mod gyre_nad_diff.mod gyre_mode_par.mod gyre_model.mod core_kinds.mod gyre_context.mod
+gyre_nad_bvp.f90 : ../extern/core/core.inc
+gyre_nad_diff.o gyre_nad_diff.mod : gyre_state.mod gyre_point.mod gyre_nad_match.mod gyre_mode_par.mod gyre_diff.mod gyre_magnus_diff.mod gyre_context.mod gyre_osc_par.mod gyre_nad_eqns.mod gyre_ext.mod gyre_trapz_diff.mod gyre_num_par.mod gyre_colloc_diff.mod gyre_diff_factory.mod core_kinds.mod
+gyre_nad_diff.f90 : ../extern/core/core.inc
+gyre_nad_eqns.o gyre_nad_eqns.mod : gyre_model_util.mod gyre_osc_par.mod gyre_eqns.mod gyre_mode_par.mod gyre_point.mod gyre_context.mod gyre_state.mod gyre_model.mod core_kinds.mod gyre_linalg.mod gyre_nad_trans.mod
+gyre_nad_eqns.f90 : ../extern/core/core.inc
+gyre_nad_match.o gyre_nad_match.mod : gyre_model.mod gyre_model_util.mod gyre_point.mod core_kinds.mod gyre_context.mod gyre_mode_par.mod gyre_ext.mod gyre_diff.mod gyre_state.mod gyre_osc_par.mod gyre_nad_trans.mod
+gyre_nad_match.f90 : ../extern/core/core.inc
+gyre_nad_trans.o gyre_nad_trans.mod : gyre_mode_par.mod gyre_context.mod gyre_point.mod gyre_model.mod gyre_state.mod gyre_model_util.mod core_kinds.mod gyre_osc_par.mod
+gyre_nad_trans.f90 : ../extern/core/core.inc
+gyre_num_par.o gyre_num_par.mod : core_kinds.mod
+gyre_num_par.f90 : ../extern/core/core.inc
+gyre_osc_file.o gyre_osc_file.mod : gyre_constants.mod gyre_util.mod gyre_model_par.mod core_order.mod gyre_evol_model.mod gyre_model.mod gyre_model_util.mod core_kinds.mod
+gyre_osc_file.f90 : ../extern/core/core.inc
+gyre_osc_par.o gyre_osc_par.mod : core_kinds.mod core_parallel.mod core_constants.mod
+gyre_osc_par.f90 : ../extern/core/core_parallel.inc ../extern/core/core.inc
+gyre_out_par.o gyre_out_par.mod : gyre_constants.mod core_kinds.mod
+gyre_out_par.f90 : ../extern/core/core.inc
+gyre_output.o gyre_output.mod : gyre_constants.mod gyre_model.mod core_string.mod gyre_mode.mod gyre_freq.mod gyre_hdf_writer.mod gyre_out_par.mod gyre_writer.mod gyre_util.mod gyre_txt_writer.mod gyre_evol_model.mod core_kinds.mod gyre_point.mod gyre_poly_model.mod
+gyre_output.f90 : ../output/gyre_output.inc ../extern/core/core.inc
+gyre_point.o gyre_point.mod : core_parallel.mod core_kinds.mod
+gyre_point.f90 : ../extern/core/core_parallel.inc ../extern/core/core.inc
+gyre_poly_file.o gyre_poly_file.mod : core_hgroup.mod gyre_model_par.mod core_kinds.mod gyre_util.mod gyre_model_util.mod gyre_model.mod gyre_poly_model.mod
+gyre_poly_file.f90 : ../extern/core/core.inc
+gyre_poly_model.o gyre_poly_model.mod : gyre_model.mod gyre_grid.mod gyre_interp.mod core_kinds.mod gyre_point.mod gyre_constants.mod
+gyre_poly_model.f90 : ../extern/core/core.inc
+gyre_qad_eval.o gyre_qad_eval.mod : gyre_ext.mod gyre_context.mod core_kinds.mod gyre_point.mod gyre_mode_par.mod gyre_calc.mod gyre_osc_par.mod gyre_nad_eqns.mod gyre_model.mod gyre_grid.mod gyre_state.mod
+gyre_qad_eval.f90 : ../extern/core/core.inc
+gyre_r_band_sysmtx.o gyre_r_band_sysmtx.mod : core_kinds.mod core_linalg.mod gyre_sysmtx.mod gyre_ext.mod core_parallel.mod gyre_linalg.mod
+gyre_r_band_sysmtx.f90 : ../matrix/gyre_band_sysmtx.inc ../extern/core/core.inc
+gyre_r_block_sysmtx.o gyre_r_block_sysmtx.mod : gyre_sysmtx.mod gyre_ext.mod core_parallel.mod core_linalg.mod gyre_linalg.mod core_kinds.mod
+gyre_r_block_sysmtx.f90 : ../extern/core/core.inc ../matrix/gyre_block_sysmtx.inc
+gyre_r_bound.o gyre_r_bound.mod : gyre_state.mod core_kinds.mod
+gyre_r_bound.f90 : ../extern/core/core.inc ../bvp/gyre_bound.inc
+gyre_r_bvp.o gyre_r_bvp.mod : gyre_sysmtx.mod gyre_sysmtx_factory.mod core_kinds.mod gyre_bound.mod gyre_state.mod gyre_status.mod gyre_num_par.mod gyre_ext.mod gyre_diff.mod
+gyre_r_bvp.f90 : ../extern/core/core.inc ../bvp/gyre_bvp.inc
+gyre_r_calc.o gyre_r_calc.mod : core_kinds.mod core_linalg.mod
+gyre_r_calc.f90 : ../extern/core/core_parallel.inc ../interp/gyre_calc.inc ../extern/core/core.inc
+gyre_r_colloc_diff.o gyre_r_colloc_diff.mod : core_linalg.mod gyre_ext.mod gyre_linalg.mod gyre_eqns.mod gyre_diff.mod gyre_state.mod gyre_point.mod core_kinds.mod
+gyre_r_colloc_diff.f90 : ../extern/core/core.inc ../diff/gyre_colloc_diff.inc
+gyre_r_diff.o gyre_r_diff.mod : gyre_state.mod gyre_ext.mod core_kinds.mod
+gyre_r_diff.f90 : ../extern/core/core.inc ../diff/gyre_diff.inc
+gyre_r_discrim_func.o gyre_r_discrim_func.mod : gyre_ext.mod core_kinds.mod gyre_bvp.mod gyre_state.mod gyre_status.mod gyre_ext_func.mod
+gyre_r_discrim_func.f90 : ../extern/core/core.inc
+gyre_r_dopp_rot.o gyre_r_dopp_rot.mod : gyre_rot.mod gyre_mode_par.mod core_kinds.mod
+gyre_r_dopp_rot.f90 : ../rot/gyre_dopp_rot.inc ../extern/core/core.inc
+gyre_r_eqns.o gyre_r_eqns.mod : core_kinds.mod gyre_state.mod gyre_point.mod
+gyre_r_eqns.f90 : ../diff/gyre_eqns.inc
+gyre_r_ext.o gyre_r_ext.mod : core_parallel.mod core_kinds.mod
+gyre_r_ext.f90 : ../extern/core/core.inc ../extern/core/core_parallel.inc
+gyre_r_ext_func.o gyre_r_ext_func.mod : core_kinds.mod gyre_r_ext.mod gyre_ext.mod
+gyre_r_ext_func.f90 : ../extern/core/core.inc
+gyre_r_interp.o gyre_r_interp.mod : gyre_calc.mod core_order.mod core_hgroup.mod core_parallel.mod core_linalg.mod core_kinds.mod
+gyre_r_interp.f90 : ../extern/core/core.inc ../extern/core/core_parallel.inc ../interp/gyre_interp.inc
+gyre_r_magnus_diff.o gyre_r_magnus_diff.mod : gyre_ext.mod core_kinds.mod gyre_state.mod gyre_point.mod gyre_eqns.mod gyre_linalg.mod gyre_diff.mod
+gyre_r_magnus_diff.f90 : ../extern/core/core.inc ../diff/gyre_magnus_diff.inc
+gyre_r_mirk_diff.o gyre_r_mirk_diff.mod : gyre_linalg.mod gyre_state.mod core_linalg.mod gyre_diff.mod gyre_eqns.mod gyre_ext.mod gyre_point.mod core_kinds.mod
+gyre_r_mirk_diff.f90 : ../diff/gyre_mirk_diff.inc ../extern/core/core.inc
+gyre_r_root.o gyre_r_root.mod : core_kinds.mod gyre_ext.mod gyre_status.mod gyre_num_par.mod gyre_ext_func.mod
+gyre_r_root.f90 : ../extern/core/core.inc
+gyre_r_rot.o gyre_r_rot.mod : core_kinds.mod
+gyre_r_rot.f90 : ../rot/gyre_rot.inc ../extern/core/core.inc
+gyre_r_search.o gyre_r_search.mod : gyre_state.mod core_kinds.mod core_order.mod gyre_point.mod gyre_scan_par.mod gyre_grid.mod core_memory.mod gyre_discrim_func.mod core_parallel.mod gyre_model.mod gyre_ext.mod gyre_rot_factory.mod gyre_context.mod gyre_root.mod gyre_wave.mod gyre_constants.mod gyre_num_par.mod gyre_mode.mod gyre_status.mod gyre_util.mod gyre_rot.mod gyre_mode_par.mod gyre_freq.mod gyre_ad_bvp.mod gyre_rad_bvp.mod gyre_bvp.mod gyre_osc_par.mod
+gyre_r_search.f90 : ../extern/core/core.inc
+gyre_r_state.o gyre_r_state.mod : core_kinds.mod
+gyre_r_state.f90 : ../extern/core/core.inc
+gyre_r_sysmtx.o gyre_r_sysmtx.mod : gyre_ext.mod core_kinds.mod
+gyre_r_sysmtx.f90 : ../extern/core/core.inc ../matrix/gyre_sysmtx.inc
+gyre_r_tar_rot.o gyre_r_tar_rot.mod : gyre_tar_fit.mod gyre_constants.mod gyre_mode_par.mod core_kinds.mod gyre_freq.mod gyre_rot.mod core_hgroup.mod
+gyre_r_tar_rot.f90 : ../extern/core/core.inc ../rot/gyre_tar_rot.inc
+gyre_r_trapz_diff.o gyre_r_trapz_diff.mod : gyre_state.mod core_linalg.mod core_kinds.mod gyre_eqns.mod gyre_ext.mod gyre_diff.mod gyre_point.mod gyre_linalg.mod
+gyre_r_trapz_diff.f90 : ../diff/gyre_trapz_diff.inc ../extern/core/core.inc
+gyre_rad_bound.o gyre_rad_bound.mod : gyre_model.mod gyre_point.mod gyre_state.mod core_kinds.mod gyre_context.mod gyre_mode_par.mod gyre_model_util.mod gyre_osc_par.mod gyre_bound.mod gyre_rad_trans.mod gyre_atmos.mod
+gyre_rad_bound.f90 : ../extern/core/core.inc
+gyre_rad_bvp.o gyre_rad_bvp.mod : gyre_wave.mod gyre_model.mod gyre_context.mod gyre_mode_par.mod gyre_state.mod gyre_qad_eval.mod gyre_osc_par.mod gyre_rad_diff.mod gyre_num_par.mod gyre_rad_bound.mod gyre_ext.mod gyre_rad_trans.mod gyre_point.mod gyre_grid.mod gyre_util.mod gyre_bvp.mod core_kinds.mod
+gyre_rad_bvp.f90 : ../extern/core/core.inc
+gyre_rad_diff.o gyre_rad_diff.mod : gyre_osc_par.mod gyre_ext.mod gyre_context.mod gyre_num_par.mod gyre_mode_par.mod gyre_state.mod gyre_rad_match.mod gyre_rad_eqns.mod gyre_point.mod core_kinds.mod gyre_diff_factory.mod
+gyre_rad_diff.f90 : ../extern/core/core.inc
+gyre_rad_eqns.o gyre_rad_eqns.mod : gyre_model.mod gyre_state.mod gyre_mode_par.mod gyre_context.mod gyre_model_util.mod gyre_point.mod gyre_rad_trans.mod gyre_eqns.mod core_kinds.mod gyre_osc_par.mod
+gyre_rad_eqns.f90 : ../extern/core/core.inc
+gyre_rad_match.o gyre_rad_match.mod : gyre_model.mod gyre_context.mod gyre_point.mod core_kinds.mod gyre_model_util.mod gyre_mode_par.mod gyre_ext.mod gyre_osc_par.mod gyre_rad_trans.mod gyre_state.mod gyre_diff.mod
+gyre_rad_match.f90 : ../extern/core/core.inc
+gyre_rad_trans.o gyre_rad_trans.mod : gyre_osc_par.mod gyre_context.mod gyre_model_util.mod gyre_model.mod gyre_state.mod core_kinds.mod gyre_mode_par.mod gyre_point.mod
+gyre_rad_trans.f90 : ../extern/core/core.inc
+gyre_root.o gyre_root.mod : gyre_c_root.mod gyre_r_root.mod
+gyre_root.f90 : 
+gyre_rot.o gyre_rot.mod : gyre_c_rot.mod gyre_r_rot.mod
+gyre_rot.f90 : 
+gyre_rot_factory.o gyre_rot_factory.mod : gyre_tar_rot.mod gyre_rot.mod gyre_osc_par.mod core_kinds.mod gyre_dopp_rot.mod gyre_mode_par.mod
+gyre_rot_factory.f90 : ../extern/core/core.inc
+gyre_scan_par.o gyre_scan_par.mod : core_kinds.mod
+gyre_scan_par.f90 : ../extern/core/core.inc
+gyre_search.o gyre_search.mod : gyre_r_search.mod gyre_c_search.mod
+gyre_search.f90 : 
+gyre_state.o gyre_state.mod : gyre_c_state.mod gyre_r_state.mod
+gyre_state.f90 : ../extern/core/core.inc
+gyre_status.o gyre_status.mod : 
+gyre_status.f90 : 
+gyre_sysmtx.o gyre_sysmtx.mod : gyre_c_sysmtx.mod gyre_r_sysmtx.mod
+gyre_sysmtx.f90 : 
+gyre_sysmtx_factory.o gyre_sysmtx_factory.mod : gyre_block_sysmtx.mod gyre_sysmtx.mod gyre_band_sysmtx.mod core_kinds.mod gyre_num_par.mod
+gyre_sysmtx_factory.f90 : ../extern/core/core.inc
+gyre_tar_eigen.o gyre_tar_eigen.mod : core_kinds.mod f95_lapack.mod
+gyre_tar_eigen.f90 : ../extern/core/core.inc
+gyre_tar_fit.o gyre_tar_fit.mod : core_kinds.mod gyre_tar_eigen.mod core_parallel.mod core_constants.mod gyre_cheb_fit.mod core_hgroup.mod
+gyre_tar_fit.f90 : ../extern/core/core.inc
+gyre_tar_rot.o gyre_tar_rot.mod : gyre_r_tar_rot.mod gyre_c_tar_rot.mod
+gyre_tar_rot.f90 : 
+gyre_trapz_diff.o gyre_trapz_diff.mod : gyre_r_trapz_diff.mod gyre_c_trapz_diff.mod
+gyre_trapz_diff.f90 : 
+gyre_txt_writer.o gyre_txt_writer.mod : gyre_util.mod core_kinds.mod gyre_writer.mod core_memory.mod
+gyre_txt_writer.f90 : ../extern/core/core.inc
+gyre_util.o gyre_util.mod : core_parallel.mod gyre_mode_par.mod gyre_out_par.mod gyre_num_par.mod gyre_scan_par.mod core_memory.mod core_kinds.mod gyre_grid_par.mod gyre_constants.mod gyre_osc_par.mod
+gyre_util.f90 : ../extern/core/core.inc
+gyre_version.o gyre_version.mod : 
+gyre_version.f90 : ../extern/core/core.inc
+gyre_wave.o gyre_wave.mod : gyre_rot.mod gyre_ext.mod gyre_model.mod core_parallel.mod gyre_freq.mod gyre_state.mod gyre_grid.mod gyre_mode_par.mod gyre_osc_par.mod core_kinds.mod gyre_util.mod gyre_context.mod gyre_constants.mod gyre_grid_util.mod gyre_evol_model.mod gyre_point.mod
+gyre_wave.f90 : ../extern/core/core_memory.inc ../extern/core/core.inc
+gyre_writer.o gyre_writer.mod : core_kinds.mod
+gyre_writer.f90 : ../extern/core/core.inc
+poly_to_fgong.o poly_to_fgong.mod : gyre_poly_model.mod gyre_poly_file.mod core_system.mod gyre_model_par.mod core_kinds.mod gyre_model.mod gyre_grid.mod gyre_constants.mod
+poly_to_fgong.f90 : ../extern/core/core.inc
+poly_to_fgong : core_order.o gyre_num_par.o gyre_model.o gyre_scan_par.o gyre_interp.o gyre_calc.o core_parallel.o gyre_mode_par.o core_hgroup.o gyre_r_interp.o core_system.o poly_to_fgong.o gyre_osc_par.o gyre_util.o gyre_r_calc.o gyre_c_calc.o core_constants.o gyre_poly_file.o gyre_c_interp.o gyre_grid.o core_linalg.o gyre_model_par.o gyre_point.o gyre_out_par.o core_memory.o gyre_grid_par.o gyre_constants.o gyre_poly_model.o gyre_model_util.o core_kinds.o

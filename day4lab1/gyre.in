@@ -1,0 +1,46 @@
+&model
+/
+
+&mode
+	l = 0				! Harmonic degree
+/
+
+&mode
+	l = 1				! Harmonic degree
+/
+
+&mode
+	l = 2				! Harmonic degree
+/
+
+&mode
+	l = 3				! Harmonic degree
+/
+
+&osc
+	variables_set = 'JCD'		! Christensen-Dalsgaard variables (i.e., what ADIPLS does)
+	outer_bound = 'JCD'	! Christensen-Dalsgaard outer mechanical boundary condition (i.e., what ADIPLS does)
+/
+
+&num
+	diff_scheme = 'MAGNUS_GL2'	! 4th-order Magnus solver for initial-value integrations; balance between accuracy and stability
+/
+
+&scan
+	grid_type = 'LINEAR'		! Scan for modes using a uniform-in-frequency grid; best for p modes
+	freq_min_units = 'UHZ' !'ACOUSTIC_CUTOFF'		! Interpret freq_min and freq_max as being in microhertz (linear)
+	freq_max_units = 'UHZ' !'ACOUSTIC_CUTOFF'		! Interpret freq_min and freq_max as being in microhertz (linear)
+	freq_min = 1982.7		! Minimum frequency to scan from
+	freq_max = 4854.3	! Maximum frequency to scan to
+	n_freq =  192			! Number of frequency points in scan
+/
+
+
+&grid
+        alpha_osc = 5                        ! Add approx. 5 grid points per oscillatory wavelength
+        alpha_exp = 1                        ! Add approx. 1 grid point per exponential wavelength 
+        n_inner = 10                                  ! Add approx. 10 grid points across central evanescent zone
+/
+
+&output
+/

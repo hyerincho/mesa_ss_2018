@@ -1,0 +1,39 @@
+&pgstar
+
+  ! MESA uses PGPLOT for live plotting and gives the user a tremendous
+  ! amount of control of the presentation of the information.
+
+  ! An easy grid to keep track of all of some relevant quantities
+    Grid2_win_flag = .true.
+    Grid2_plot_name(1) = 'HR'
+    Grid2_plot_name(2) = 'TRho_Profile'
+    Grid2_win_width = 10
+
+
+  ! Here are a few extra plots that might be helpful to stare at.
+  ! Set the following to .true. to display them.
+    HR_win_flag = .false.
+    TRho_Profile_win_flag = .false.
+
+  ! Extra parameters for the HR diagram
+  ! this plots the history of L,Teff over many timesteps
+  ! set window size (aspect_ratio = height/width)
+    HR_win_width = 6
+    HR_win_aspect_ratio = 1.0
+
+  ! Extra parameters for the temperature/density profile
+  ! this plots the internal structure at single timestep
+  ! For Grid2, don't display legend explaining colors
+  ! To display, set to .true. This is recommended if TRho_Profile_win_flag = .true. 
+    show_TRho_Profile_legend = .false.
+  
+  ! For Grid2, don't display numerical info about the star
+  ! To display, set to .true. This is recommended if TRho_Profile_win_flag = .true. 
+    show_TRho_Profile_text_info = .false.
+
+  ! set window size (aspect_ratio = height/width)
+    TRho_Profile_win_width = 8
+    TRho_Profile_win_aspect_ratio = 0.75
+
+ pause_when_terminate = .true.
+/ ! end of pgstar namelist

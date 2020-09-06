@@ -1,0 +1,44 @@
+
+                           Teff chi2term     1857.5234488317
+                                    Teff     8543.9397548655
+                                Teff_obs     5958.0000000000
+                              Teff_sigma       60.0000000000
+
+                           logL chi2term      184.6593531804
+                                    logL        0.5994471156
+                                logL_obs       -0.0800000000
+                              logL_sigma        0.0500000000
+
+                                  R/Rsun        0.9113097977
+                               logL/Lsun        0.5994471156
+                                    Teff     8543.9397548655
+                                    logg        4.5977385205
+                                     FeH       -2.0000000000
+                                    logR       -0.0403339605
+                         surface_Z_div_X        0.0002293000
+                              surface_He        0.2500000000
+                                     Rcz        0.0000000000
+                              csound_rms        0.0000000000
+                                delta_nu      158.7008881252
+                                  nu_max     3683.2649135113
+
+                                 a_div_r       -1.0000000000
+                            correction_r       -1.0000000000
+
+                              initial h1        0.7498280644
+                             initial he3        0.0000250000
+                             initial he4        0.2499750000
+                               initial Y        0.2500000000
+                               initial Z        0.0001719356
+                             initial FeH       -2.0000000000
+
+                               mass/Msun        1.2000000000
+                                   alpha        4.5000000000
+                                    f_ov        0.1000000000
+                                     age    1.0482375501737227E+08
+
+                           chi^2 spectro     1021.0914010060
+
+                            model number              90
+
+

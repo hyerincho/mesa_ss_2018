@@ -1,0 +1,35 @@
+&star_job  ! inlist_astero   
+
+      pgstar_flag = .true.
+pause_before_terminate = .true.
+
+/ ! end of star_job namelist
+
+
+&controls
+      calculate_Brunt_N2 = .true. 
+      num_cells_for_smooth_brunt_B = 0
+      
+      which_atm_option = 'Eddington_grey'
+
+      ! timesteps
+
+      max_years_for_timestep = 1d8  ! in seconds.  max_timestep <= 0 means no upper limit.
+      xa_central_lower_limit_species(1) = 'h1'
+      xa_central_lower_limit(1) = 1d-3
+
+      varcontrol_target = 1d-4
+
+      ! mesh adjustment
+
+      mesh_delta_coeff = 0.75
+
+      ! controls for output
+
+      photo_interval = 999999
+      profile_interval = 100
+      history_interval = 1
+      terminal_interval = 10
+      write_header_frequency = 10
+
+/ ! end of controls namelist

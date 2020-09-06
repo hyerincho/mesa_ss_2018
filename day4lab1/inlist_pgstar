@@ -1,0 +1,23 @@
+&pgstar
+
+HR_win_flag = .true.
+
+!HR_logT_min = 2
+!HR_logT_max = 6
+HR_logL_min = -0.2
+
+show_HR_target_box = .true.
+HR_target_n_sigma = 1
+HR_target_logL = -0.08
+HR_target_logL_sigma = 0.05
+HR_target_logT = 3.77510049888 !log(5958)
+HR_target_logT_sigma = 1.77815125038 !log(60)
+
+HR_file_flag = .true.
+HR_file_dir = 'png'
+HR_file_prefix = 'hr_feh-2_y.10_m1.0_a2_f.1'
+HR_file_interval = 10
+HR_file_width = -1
+HR_file_aspect_ratio = -1
+
+/

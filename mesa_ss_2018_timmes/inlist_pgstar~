@@ -1,0 +1,172 @@
+&pgstar
+
+pgstar_interval = 10
+pgstar_show_age_in_years = .true.
+pgstar_show_age_in_seconds = .false.
+pgstar_sleep = 0.0
+
+
+! type of file output
+! white_on_black flags -- true means black background, false means white background
+
+! png files
+file_white_on_black_flag = .true.
+file_device = 'png'            
+file_extension = 'png'        
+
+! postscript files
+!file_white_on_black_flag = .true.
+!file_device = 'vcps'            
+!file_extension = 'ps'       
+
+
+!------------------------------------------------------------------------------------
+! abundance profile plot
+
+Abundance_win_flag = .true.
+
+! window properties
+Abundance_win_width = 10
+Abundance_win_aspect_ratio = 0.75
+         
+Abundance_xleft = 0.15
+Abundance_xright = 0.85
+Abundance_ybot = 0.15
+Abundance_ytop = 0.85
+Abundance_txt_scale = 0.8
+Abundance_title = ''
+
+! isotopes to plot
+
+Abundance_num_isos_to_show = 22
+
+Abundance_which_isos_to_show(1) = 'h1'
+Abundance_which_isos_to_show(2) = 'prot'
+Abundance_which_isos_to_show(3) = 'he3'
+Abundance_which_isos_to_show(4) = 'he4'
+Abundance_which_isos_to_show(5) = 'c12'
+Abundance_which_isos_to_show(6) = 'n14'
+Abundance_which_isos_to_show(7) = 'o16'
+Abundance_which_isos_to_show(8) = 'ne20'
+Abundance_which_isos_to_show(9) = 'mg24'
+Abundance_which_isos_to_show(10) = 'si28'
+Abundance_which_isos_to_show(11) = 's32'
+Abundance_which_isos_to_show(12) = 'ar36'
+Abundance_which_isos_to_show(13) = 'ca40'
+Abundance_which_isos_to_show(14) = 'ti44'
+Abundance_which_isos_to_show(15) = 'cr48'
+Abundance_which_isos_to_show(16) = 'cr56'
+Abundance_which_isos_to_show(17) = 'fe52'
+Abundance_which_isos_to_show(18) = 'fe54'
+Abundance_which_isos_to_show(19) = 'fe56'
+Abundance_which_isos_to_show(20) = 'ni56'
+Abundance_which_isos_to_show(21) = 'neut'
+Abundance_which_isos_to_show(22) = 'ne22'
+
+       
+! number and size of isotope labels along curves
+num_abundance_line_labels = 4
+Abundance_line_txt_scale_factor = 0.8
+
+
+! number and size of isotopes on legend         
+Abundance_legend_max_cnt = 0
+Abundance_legend_txt_scale_factor = 0.6
+
+! xaxis name and orientation
+Abundance_xaxis_name = 'mass' 
+Abundance_xaxis_reversed = .false.
+         
+! xaxis limits 
+Abundance_xmin = 0.0 
+Abundance_xmax = 0.65
+         
+! yaxis limits 
+Abundance_log_mass_frac_min = -3.0 
+Abundance_log_mass_frac_max = 0.3
+         
+! file output
+Abundance_file_flag = .false.
+Abundance_file_dir = 'pms_to_wd_'
+Abundance_file_prefix = 'abund_'
+Abundance_file_interval = 10     ! output when mod(model_number,Power_file_interval)==0
+Abundance_file_width = -1        ! (inches) negative means use same value as for window
+Abundance_file_aspect_ratio = -1 ! negative means use same value as for window
+
+
+!------------------------------------------------------------------------------------
+! power profile plot
+
+Power_win_flag = .false.
+Power_win_width = 10
+Power_win_aspect_ratio = 0.75
+Power_title = ''      
+
+Power_xleft = 0.15
+Power_xright = 0.85
+Power_ybot = 0.15
+Power_ytop = 0.85
+Power_txt_scale = 1.0
+Power_title = ' '
+
+Power_xaxis_name = 'mass'
+Power_xaxis_reversed = .false.
+
+Power_legend_max_cnt = 16
+Power_legend_txt_scale_factor = 1.0 ! relative to other text
+
+Power_xmin = 0.0 
+Power_xmax = 1.0   !  -101d0
+
+Power_ymin = -101d0 ! only used if /= -101d0
+Power_ymax = -101d0 ! only used if /= -101d0
+
+! file output
+Power_file_flag = .false.
+Power_file_dir = 'pms_to_wd_'
+Power_file_prefix = 'power_'
+Power_file_interval = 10     ! output when mod(model_number,Power_file_interval)==0
+Power_file_width = -1        ! (inches) negative means use same value as for window
+Power_file_aspect_ratio = -1 ! negative means use same value as for window
+
+
+
+
+!------------------------------------------------------------------------------------
+! Kippenhahn diagram history plot
+
+Kipp_win_flag = .false.
+
+! window properties
+Kipp_win_width = 10
+Kipp_win_aspect_ratio = 0.75
+Kipp_title = ''      
+
+! y axis limits
+Kipp_mass_max = 2.1
+Kipp_mass_min = 0 
+Kipp_show_mass_boundaries = .true.
+
+! x axis limits
+Kipp_xmax = -101        ! maximum step number.  negative means use default.
+Kipp_xmin = 0           ! minimum step number.  negative means use default.
+Kipp_max_width = -1     ! only used if > 0.  causes xmin to move with xmax.
+
+Kipp_show_mixing = .true.
+Kipp_show_burn = .true.
+Kipp_show_luminosities = .false.
+
+! file output
+Kipp_file_flag = .false.
+Kipp_file_dir = 'pms_to_wd_'
+Kipp_file_prefix = 'kipp_'
+Kipp_file_interval = 10     ! output when mod(model_number,Kipp_file_interval)==0
+Kipp_file_width = -1        ! (inches) negative means use same value as for window
+Kipp_file_aspect_ratio = -1 ! negative means use same value as for window
+
+
+
+
+
+
+/ ! end of pgstar namelist

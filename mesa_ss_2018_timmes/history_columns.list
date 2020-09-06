@@ -1,0 +1,171 @@
+! history_columns.list -- massive star monte carlo - cef. - 26 may 2016
+
+      model_number ! counting from the start of the run
+      num_zones
+      star_age ! elapsed simulated time in years since the start of the run
+      star_mass ! in Msun units
+      log_dt ! log10 time_step in years
+      log_abs_mdot ! log10(abs(star_mdot)) (in msolar per year)
+
+      total_angular_momentum
+   
+      ! 2 zones where eps_nuc > burn_min1 erg/g/s
+      ! for each zone have 4 numbers: start1, start2, end2, end1
+      ! start1 is mass of inner edge where first goes > burn_min1 (or -20 if none such)
+      ! start2 is mass of inner edge where first zone reaches burn_min2 erg/g/sec (or -20 if none such)
+      ! end2 is mass of outer edge where first zone drops back below burn_min2 erg/g/s
+      ! end1 is mass of outer edge where first zone ends (i.e. eps_nuc < burn_min1)
+      ! similar for the second zone
+   
+      epsnuc_M_1 ! start1 for 1st zone
+      epsnuc_M_2 ! start2
+      epsnuc_M_3 ! end2
+      epsnuc_M_4 ! end1
+      
+      epsnuc_M_5 ! start1 for 2nd zone
+      epsnuc_M_6 ! start2
+      epsnuc_M_7 ! end2
+      epsnuc_M_8 ! end1
+   
+   ! information about abundance transitions
+   
+      he_core_mass
+      c_core_mass
+      o_core_mass   
+      si_core_mass
+      fe_core_mass
+
+   ! information about cores
+
+      he_core_mass
+      he_core_radius
+      he_core_lgT
+      he_core_lgRho
+      he_core_L
+
+      c_core_mass
+      c_core_radius
+      c_core_lgT
+      c_core_lgRho
+      c_core_L
+
+      o_core_mass
+      o_core_radius
+      o_core_lgT
+      o_core_lgRho
+      o_core_L
+
+      si_core_mass
+      si_core_radius
+      si_core_lgT
+      si_core_lgRho
+      si_core_L
+   
+      fe_core_mass
+      fe_core_radius
+      fe_core_lgT
+      fe_core_lgRho
+      fe_core_L
+
+      envelope_mass ! = star_mass - he_core_mass
+      envelope_fraction_left ! = envelope_mass / (initial_mass - he_core_mass)
+
+      h_rich_layer_mass ! = star_mass - he_core_mass
+      he_rich_layer_mass ! = he_core_mass - c_core_mass
+      c_rich_layer_mass ! = c_core_mass - o_core_mass
+      o_rich_layer_mass ! = o_core_mass - si_core_mass
+      si_rich_layer_mass ! = si_core_mass - fe_core_mass
+   
+
+   ! timescales
+      
+      dynamic_timescale ! dynamic timescale (seconds) -- estimated by 2*pi*sqrt(r^3/(G*m))
+      kh_timescale ! kelvin-helmholtz timescale (years)
+      mdot_timescale ! star_mass/abs(star_mdot) (years)
+      kh_div_mdot_timescales ! kh_timescale/mdot_timescale
+      nuc_timescale ! nuclear timescale (years) -- proportional to mass divided by luminosity
+      log_chem_timescale ! burn+mix timescale (years)
+
+   ! integrated power
+   
+      log_LH ! log10 power_h_burn
+      log_LHe ! log10 power_he_burn
+      log_LC ! log10 power_c_burn
+      log_LZ ! log10 total burning power including LC, but excluding LH and LHe and photodisintegrations
+      log_Lnuc ! log(LH + LHe + LZ)
+      log_Lnuc_sub_log_L
+      log_Lneu ! log10 power emitted in neutrinos, nuclear and thermal (in Lsun units)
+      log_Lneu_nuc ! log10 power emitted in neutrinos, nuclear sources only (in Lsun units)
+      log_Lneu_nonnuc ! log10 power emitted in neutrinos, thermal sources only (in Lsun units)
+      
+   ! conditions at the photosphere
+     
+      log_Teff ! log10 effective temperature
+   
+   
+   ! conditions at or near the surface of the model (outer edge of outer cell)
+   
+      log_L ! log10 luminosity in Lsun units
+      log_R ! log10 radius in Rsun units
+   
+   ! conditions near center
+   
+      log_center_T ! temperature
+      log_center_Rho ! density
+      log_center_P ! pressure
+      
+      center_degeneracy ! the electron chemical potential in units of k*T
+      center_gamma ! plasma interaction parameter
+      center_mu
+      center_ye
+      center_abar
+      
+      center_eps_grav
+      center_entropy ! in units of kerg per baryon
+      compactness_parameter ! (m/Msun)/(R(m)/1000km) for m = 2.5 Msun
+      
+
+      add_center_abundances
+
+
+
+
+! total mass 
+
+      total_mass h1
+      total_mass he4
+      total_mass c12
+      total_mass n14
+      total_mass o16
+      total_mass ne20
+      total_mass si28
+      total_mass s32
+      total_mass ar36
+      total_mass ca40
+      total_mass fe54
+      total_mass fe56
+      total_mass ni56
+      total_mass cr56
+      
+   ! log10 total luminosity for reaction categories (Lsun units)
+      
+      pp
+      cno
+      tri_alfa
+      burn_c
+      burn_n
+      burn_o
+      burn_ne
+      burn_na
+      
+      elapsed_time ! time since start of run (seconds)
+
+      
+      
+   ! mixing regions
+
+      mixing_regions 40 ! note: this includes regions where the mixing type is no_mixing.
+
+   ! regions of strong nuclear burning
+
+      burning_regions 80      

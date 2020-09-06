@@ -1,0 +1,41 @@
+! profile_columns.list -- massive star monte carlo - cef. - 26 may 2016
+   
+   zone ! numbers start with 1 at the surface
+   logT ! log10(temperature) at center of zone
+   logRho ! log10(density) at center of zone
+   logP ! log10(pressure) at center of zone
+   logR ! log10(radius/Rsun) at outer boundary of zone
+   entropy ! specific entropy divided by (avo*kerg)
+   mixing_type ! mixing types are defined in mesa/mlt/public/mlt_def
+   csound ! sound speed
+   eta ! electron degeneracy parameter (eta >> 1 for significant degeneracy)
+   mu ! mean molecular weight per gas particle (ions + free electrons)
+   logtau ! log10(optical depth) at center of zone
+   logPgas ! log10(pgas)
+   log_thermal_time_to_surface
+   abar ! average atomic weight (g/mole)
+   ye ! average charge per baryon = proton fraction
+   eps_nuc ! ergs/g/sec from nuclear reactions (reaction neutrinos subtracted)
+   non_nuc_neu ! non-nuclear-reaction neutrino losses
+   mlt_mixing_length ! mixing length for mlt (cm)
+   mlt_mixing_type ! value returned by mlt
+   brunt_N2    
+   pressure_scale_height ! in Rsun units
+   log_D_mix ! log10 diffusion coefficient for mixing in units of cm^2/second (Eulerian)
+   log_mlt_D_mix ! log10 diffusion coefficient for mixing from mlt (cm^2/sec)
+   log_D_conv ! D_mix for regions where mix_type = convective_mixing
+   log_D_soft ! D_mix for regions where mix_type = softened_convective_mixing
+   log_D_semi ! D_mix for regions where mix_type = semiconvective_mixing
+   log_D_ovr ! D_mix for regions where mix_type = overshoot_mixing
+   log_D_thrm ! D_mix for regions where mix_type = thermohaline_mixing
+   log_D_minimum ! D_mix for regions where mix_type = minimum_mixing
+   log_D_anon ! D_mix for regions where mix_type = anonymous_mixing
+
+   j_rot ! specific angular momentum at cell boundary
+   
+   gradT ! mlt value for required temperature gradient dlnT/dlnP
+   gradr ! dlnT/dlnP required for purely radiative transport
+   mass ! m/Msun. mass coordinate of outer boundary of cell.
+      
+!   add_log_abundances
+   add_abundances

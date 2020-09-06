@@ -1,0 +1,44 @@
+
+                           Teff chi2term    17493.8848482726
+                                    Teff    13893.8670259639
+                                Teff_obs     5958.0000000000
+                              Teff_sigma       60.0000000000
+
+                           logL chi2term     5070.1010753494
+                                    logL        3.4802321116
+                                logL_obs       -0.0800000000
+                              logL_sigma        0.0500000000
+
+                                  R/Rsun        9.5001096107
+                               logL/Lsun        3.4802321116
+                                    Teff    13893.8670259639
+                                    logg        3.0506338452
+                                     FeH       -2.0000000000
+                                    logR        0.9777286161
+                         surface_Z_div_X        0.0002293000
+                              surface_He        0.2500000000
+                                     Rcz        0.0000000000
+                              csound_rms        0.0000000000
+                                delta_nu        8.8358152041
+                                  nu_max       81.9494041861
+
+                                 a_div_r       -1.0000000000
+                            correction_r       -1.0000000000
+
+                              initial h1        0.7498280644
+                             initial he3        0.0000250000
+                             initial he4        0.2499750000
+                               initial Y        0.2500000000
+                               initial Z        0.0001719356
+                             initial FeH       -2.0000000000
+
+                               mass/Msun        3.7000000000
+                                   alpha        2.0000000000
+                                    f_ov        0.1000000000
+                                     age    2.2814713150025994E+08
+
+                           chi^2 spectro    11281.9929618110
+
+                            model number             311
+
+
